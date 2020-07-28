@@ -3,7 +3,7 @@
   id int
   resource_id int
 */
-CREATE TABLE Bays
+CREATE TABLE if not exists Bays
 (
     id          INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
     resource_id INT             NOT NULL
@@ -14,7 +14,7 @@ CREATE TABLE Bays
   name varchar
   description varchar
 */
-CREATE TABLE ResourcesGroups
+CREATE TABLE if not exists ResourcesGroups
 (
     id          INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
     name        varchar(50)     NOT NULL UNIQUE,
@@ -29,7 +29,7 @@ CREATE TABLE ResourcesGroups
   group_id int
   permanent boolean
 */
-CREATE TABLE Resources
+CREATE TABLE if not exists Resources
 (
     id          INT PRIMARY KEY NOT NULL,
     name        varchar(50)     NOT NULL UNIQUE,
